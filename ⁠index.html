@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل أطباء وعيادات حديثة</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #0c83e2;
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        header h1 { margin: 0; font-size: 1.8rem; }
+        header p { margin: 0.5rem 0 0 0; opacity: 0.9; font-size: 1rem; }
+        
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .doctor-card {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            padding: 1.5rem;
+            border-top: 6px solid #0c83e2;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .doc-info h3 { margin: 0 0 0.5rem 0; color: #0c83e2; font-size: 1.3rem; }
+        .specialty { font-weight: bold; color: #e67e22; margin-bottom: 1rem; font-size: 1rem; }
+        .details p { font-size: 0.9rem; color: #555; margin: 0.4rem 0; }
+        
+        .action-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.8rem;
+            margin-top: 1.5rem;
+        }
+        .btn {
+            display: inline-block;
+            text-align: center;
+            padding: 0.7rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        .btn-booking { background-color: #25d366; color: white; }
+        .btn-location { background-color: #e8f0fe; color: #0c83e2; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>دليل العيادات الطبية في حديثة</h1>
+        <p>البحث، الاستفسار، وحجز المواعيد بسهولة</p>
+    </header>
+
+    <div class="container">
+
+        <!-- دكتور 1 -->
+        <div class="doctor-card">
+            <div class="doc-info">
+                <h3>الدكتور أحمد الحارثي</h3>
+                <div class="specialty">إخصائي باطنية وقلبية</div>
+                <div class="details">
+                    <p>📍 <b>العنوان:</b> شارع الأطباء - قرب المستشفى</p>
+                    <p>🕒 <b>التواجد:</b> من 3:00 عصراً إلى 8:00 مساءً</p>
+                </div>
+            </div>
+            <div class="action-buttons">
+                <!-- الـ 964 هو كود العراق، غير الرقم اللي بعده لرقم الدكتور الحقيقي بدون الصفر الأول -->
+                <a href="https://wa.me/9647700000000?text=مرحباً، أود الاستفسار عن حجز موعد" target="_blank" class="btn btn-booking">حجز واتساب</a>
+                <a href="https://maps.google.com" target="_blank" class="btn btn-location">موقع العيادة</a>
+            </div>
+        </div>
+
+        <!-- دكتور 2 -->
+        <div class="doctor-card">
+            <div class="doc-info">
+                <h3>الدكتورة سارة العامري</h3>
+                <div class="specialty">إخصائية نسائية وتوليد</div>
+                <div class="details">
+                    <p>📍 <b>العنوان:</b> حي السراي - مجمع الشفاء</p>
+                    <p>🕒 <b>التواجد:</b> من 1:00 ظهراً إلى 6:00 مساءً</p>
+                </div>
+            </div>
+            <div class="action-buttons">
+                <a href="https://wa.me/9647700000000?text=مرحباً، أود الاستفسار عن حجز موعد" target="_blank" class="btn btn-booking">حجز واتساب</a>
+                <a href="https://maps.google.com" target="_blank" class="btn btn-location">موقع العيادة</a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
