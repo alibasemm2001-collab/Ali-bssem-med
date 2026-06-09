@@ -5,107 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>دليل أطباء وعيادات حديثة</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f0f4f8;
+        * {
+            box-shadow: border-box;
             margin: 0;
             padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #f0f4f8;
             color: #333;
+            padding-bottom: 30px;
         }
         header {
-            background-color: #0c83e2;
+            background: linear-gradient(135deg, #0c83e2, #065fa3);
             color: white;
             text-align: center;
-            padding: 2rem 1rem;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            padding: 2.5rem 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            margin-bottom: 2rem;
         }
-        header h1 { margin: 0; font-size: 1.8rem; }
-        header p { margin: 0.5rem 0 0 0; opacity: 0.9; font-size: 1rem; }
-        
-        .container {
-            max-width: 1100px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
+        header h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+        header p { font-size: 1rem; opacity: 0.9; }
+        .container { max-width: 600px; margin: 0 auto; padding: 0 15px; }
         .doctor-card {
             background-color: white;
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             padding: 1.5rem;
-            border-top: 6px solid #0c83e2;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            margin-bottom: 1.5rem;
+            border-right: 6px solid #0c83e2;
         }
-        .doc-info h3 { margin: 0 0 0.5rem 0; color: #0c83e2; font-size: 1.3rem; }
-        .specialty { font-weight: bold; color: #e67e22; margin-bottom: 1rem; font-size: 1rem; }
-        .details p { font-size: 0.9rem; color: #555; margin: 0.4rem 0; }
-        
-        .action-buttons {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0.8rem;
-            margin-top: 1.5rem;
-        }
-        .btn {
+        .doctor-name { color: #065fa3; font-size: 1.3rem; margin-bottom: 0.5rem; }
+        .doctor-specialty {
+            background-color: #e1f0fc;
+            color: #0c83e2;
             display: inline-block;
-            text-align: center;
-            padding: 0.7rem;
-            border-radius: 8px;
-            text-decoration: none;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
             font-weight: bold;
-            font-size: 0.9rem;
+            margin-bottom: 1rem;
         }
-        .btn-booking { background-color: #25d366; color: white; }
-        .btn-location { background-color: #e8f0fe; color: #0c83e2; }
+        .info-item { margin-bottom: 0.6rem; font-size: 0.95rem; }
+        .info-label { font-weight: bold; color: #666; margin-left: 5px; }
+        .btn-call {
+            display: block;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem;
+            border-radius: 10px;
+            font-weight: bold;
+            margin-top: 1rem;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(40,167,69,0.2);
+        }
+        .footer-text { text-align: center; color: #999; font-size: 0.85rem; margin-top: 2rem; }
     </style>
 </head>
 <body>
-
     <header>
-        <h1>دليل العيادات الطبية في حديثة</h1>
-        <p>البحث، الاستفسار، وحجز المواعيد بسهولة</p>
+        <h1>دليل أطباء وعيادات حديثة</h1>
+        <p>البحث عن أفضل الأطباء وحجز المواعيد بسهولة</p>
     </header>
-
     <div class="container">
-
-        <!-- دكتور 1 -->
         <div class="doctor-card">
-            <div class="doc-info">
-                <h3>الدكتور احمد شعبان</h3>
-                <div class="specialty">اخصائي جراحة اسنان وتجميله</div>
-                <div class="details">
-                    <p>📍 <b>العنوان:</b> شارع الأطباء - قرب المستشفى</p>
-                    <p>🕒 <b>التواجد:</b> من 3:00 عصراً إلى 8:00 مساءً</p>
-                </div>
-            </div>
-            <div class="action-buttons">
-                <!-- الـ 964 هو كود العراق، غير الرقم اللي بعده لرقم الدكتور الحقيقي بدون الصفر الأول -->
-                <a href="https://wa.me/9647700000000?text=مرحباً، أود الاستفسار عن حجز موعد" target="_blank" class="btn btn-booking">حجز واتساب</a>
-                <a href="https://maps.google.com" target="_blank" class="btn btn-location">موقع العيادة</a>
-            </div>
+            <div class="doctor-name">الدكتور أحمد الحجازي</div>
+            <div class="doctor-specialty">أمراض القلب والأوعية الدموية</div>
+            <div class="info-item"><span class="info-label">العنوان:</span> حديثة - الشارع العام - قرب الصيدلية المركزية</div>
+            <div class="info-item"><span class="info-label">أوقات الدوام:</span> من 4:00 عصراً إلى 8:00 مساءً</div>
+            <a href="tel:07700000000" class="btn-call">اتصال مباشر للحجز</a>
         </div>
-
-        <!-- دكتور 2 -->
         <div class="doctor-card">
-            <div class="doc-info">
-                <h3>الدكتوره عربيه  </h3>
-                <div class="specialty">إخصائية نسائية وتوليد</div>
-                <div class="details">
-                    <p>📍 <b>العنوان:</b> حي السراي - مجمع الشفاء</p>
-                    <p>🕒 <b>التواجد:</b> من 1:00 ظهراً إلى 6:00 مساءً</p>
-                </div>
-            </div>
-            <div class="action-buttons">
-                <a href="https://wa.me/9647700000000?text=مرحباً، أود الاستفسار عن حجز موعد" target="_blank" class="btn btn-booking">حجز واتساب</a>
-                <a href="https://maps.google.com" target="_blank" class="btn btn-location">موقع العيادة</a>
-            </div>
+            <div class="doctor-name">الدكتورة عربية العاني</div>
+            <div class="doctor-specialty">طب وجراحة الأطفال حديثي الولادة</div>
+            <div class="info-item"><span class="info-label">العنوان:</span> حديثة - حي السراي - مقابل مستشفى حديثة العام</div>
+            <div class="info-item"><span class="info-label">أوقات الدوام:</span> من 3:00 ظهراً إلى 7:00 مساءً</div>
+            <a href="tel:07800000000" class="btn-call">اتصال مباشر للحجز</a>
         </div>
-
+        <p class="footer-text">تم التطوير بواسطة باسم الشمري © 2026</p>
     </div>
-
 </body>
 </html>
